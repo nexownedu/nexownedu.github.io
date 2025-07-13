@@ -3,225 +3,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nexown Materials | Study Resources</title>
+  <title>Nexown</title>
+  <meta name="description" content="Nexown offers curated 3 & 5 mark questions, CBSE notes, and business/trading guides for students. Buy digital or printed study packs now!">
+  <meta name="keywords" content="Nexown, Study Materials, Notes, 3 Mark, 5 Mark, CBSE, Trading Guide, School, Printed Notes, Educational Business">
+  <meta name="author" content="Nexown Team">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f8fb;
-      color: #333;
+      font-family: 'Inter', sans-serif;
       line-height: 1.7;
+      background-color: #f9fbfc;
+      color: #222;
     }
 
     header {
-      background-color: #1a1a2e;
-      padding: 60px 20px;
+      background: linear-gradient(to right, #1a1a2e, #16213e);
+      color: white;
+      padding: 80px 20px 60px;
       text-align: center;
-      color: #fff;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 3em;
-      letter-spacing: 2px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 15px;
-      color: #ccc;
-    }
-
-    .section {
-      padding: 60px 30px;
-      max-width: 1100px;
-      margin: 40px auto;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-    }
-
-    .section h2 {
-      font-size: 2em;
-      color: #1a1a2e;
-      margin-bottom: 20px;
-      border-bottom: 3px solid #1a1a2e;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
-
-    th, td {
-      padding: 16px;
-      border: 1px solid #ddd;
-      text-align: center;
-      font-size: 1em;
-    }
-
-    th {
-      background-color: #1a1a2e;
-      color: #ffffff;
-    }
-
-    .order-button {
-      display: block;
-      width: fit-content;
-      margin: 30px auto 0;
-      background-color: #27ae60;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .order-button:hover {
-      background-color: #2ecc71;
-    }
-
-    footer {
-      background-color: #1a1a2e;
-      color: white;
-      text-align: center;
-      padding: 25px 0;
-      font-size: 1em;
-      margin-top: 60px;
-    }
-
-    .team-list li {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
-    @media (max-width: 768px) {
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .order-btn {
+      margin-top: 25px;
+      display: inline-block;
+      background: #27ae60;
+      padding: 14px 28px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: #2ecc71;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 25px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+      border-left: 6px solid #1a1a2e;
+      padding-left: 12px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+
+    .pricing {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-top: 30px;
+    }
+
+    .price-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-top: 5px solid #1a1a2e;
+    }
+
+    .price-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .price-card span {
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    .about, .team {
+      margin-top: 40px;
+    }
+
+    .team ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .team li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 80px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2rem;
       }
-      .section {
-        padding: 30px 15px;
-      }
-      table th, table td {
-        font-size: 0.9em;
-        padding: 12px;
+      h2 {
+        font-size: 1.5rem;
       }
     }
+    .contact-icon {
+  margin-right: 10px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Apply Animations */
+.bounce { animation-name: bounce; }
+.spin { animation-name: spin; }
+.flash { animation-name: flash; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Nexown</h1>
-    <p>Print Success. Power Marks. | Educational Resources & Notes for Smart Students</p>
+    <p>Print Success. Power Marks. Study Smart with Nexown.</p>
+    <a class="order-btn" href="https://wa.me/+918838926026?text=Hi%20Nexown!%20I'm%20interested%20in%20buying%20materials.">📲 Order via WhatsApp</a>
   </header>
 
-  <section class="section">
+  <section>
     <h2>📘 What We Offer</h2>
     <ul>
-      <li>Selected 3 & 5 Mark Questions (Digital & Printed)</li><br>
-      <li>CBSE/State Board Short Notes</li><br>
-      <li>Trading, Business & Entrepreneurship Guides</li><br>
-      <li>All Materials Prepared by Top Scoring Students</li><br>
+      <li>Handpicked 3 & 5 Mark Questions (Digital & Printed)</li>
+      <li>CBSE/State Board Notes (Short & Crisp)</li>
+      <li>Trading, Business & Entrepreneurship Guides</li>
+      <li>Materials by Top Scoring Students</li>
     </ul>
   </section>
+<section>
+  <h2>💰 Pricing</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>📘 Economics</h3>
+      <p><strong>5 Mark (Q/A) Shorted :</strong> ₹15 (Digital), ₹30 (Printed)</p>
+      <p><strong>3 Mark (Q/A) Shorted :</strong> ₹8 (Digital), ₹16 (Printed)</p>
+    </div>
 
-  <section class="section">
-    <h2>💰 Pricing</h2>
-    <table>
-      <tr>
-        <th>Item</th>
-        <th>Format</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>3 Mark Question</td>
-        <td>Digital</td>
-        <td>₹5</td>
-      </tr>
-      <tr>
-        <td>3 Mark Question</td>
-        <td>Printed</td>
-        <td>₹10</td>
-      </tr>
-      <tr>
-        <td>5 Mark Question</td>
-        <td>Digital</td>
-        <td>₹10</td>
-      </tr>
-      <tr>
-        <td>5 Mark Question</td>
-        <td>Printed</td>
-        <td>₹20</td>
-      </tr>
-      <tr>
-        <td>CBSE Short Notes</td>
-        <td>Digital</td>
-        <td>₹25</td>
-      </tr>
-         <tr>
-        <td>CBSE Short Notes</td>
-        <td>printed</td>
-        <td>₹45</td>
-      </tr>
-      <tr>
-        <td>Entrepreneurship Guide</td>
-        <td>Digital</td>
-        <td>₹35</td>
-      </tr>
-      <tr>
-        <td>Trading Basics (PDF)</td>
-        <td>Digital</td>
-        <td>₹30</td></tr>
-          <tr>
-        <td>Trading Basics (PDF)</td>
-        <td>printed</td>
-        <td>₹50</td></tr>
-       <tr> <td>business plans<br> (a to z)</td>
-      <td>digital</td>
-        <td>₹70</td></tr>
-               <tr> <td>business plans<br> (a to z)</td>
-      <td>printed</td>
-        <td>₹50</td></tr>
-        
-      </tr>
-    </table>
+    <div class="price-card">
+      <h3>📘 Commerce</h3>
+      <p><strong>5 Mark (Q/A) Shorted :</strong> ₹10 (Digital), ₹20 (Printed)</p>
+      <p><strong>3 Mark (Q/A) Shorted :</strong> ₹5 (Digital), ₹10 (Printed)</p>
+    </div>
 
-    <a class="order-button" href="https://wa.me/+918838926026?text=Hi%20Nexown!%20I'm%20interested%20in%20buying%20materials.">Order</a>
+    <div class="price-card">
+      <h3>📘 Accountancy</h3>
+      <p><strong>5 Mark (Q/A) Shorted :</strong> ₹10 (Digital), ₹20 (Printed)</p>
+      <p><strong>3 Mark (Q/A) Shorted :</strong> ₹5 (Digital), ₹10 (Printed)</p>
+    </div>
+
+    <div class="price-card">
+      <h3>📈 Trading Materials</h3>
+      <p><strong>Basics:</strong> ₹30</p>
+      <p><strong>Intermediate:</strong> ₹50</p>
+      <p><strong>Professional:</strong> ₹80</p>
+    </div>
+
+    <div class="price-card">
+      <h3>💼 Business Plans</h3>
+      <p>A to Z Guide : ₹40</p>
+      <p>Executing work : ₹50</p>
+    </div>
+
+    <div class="price-card">
+      <h3>📗 CBSE Notes</h3>
+      <p>₹20/chapter (digital)</p><p>₹35/chapter (printed)</p>
+    </div>
+
+    <div class="price-card">
+      <h3>🚀 Entrepreneurship</h3>
+      <p>Guide : ₹40</p>
+    </div>
+  </div>
+</section>
+
+  <section class="about">
+    <h2>📖 About Nexown</h2>
+    <p>
+      Nexown is a student-founded brand focused on preparing students for success. From precise 3-mark and 5-mark exam questions to
+      business and trading basics, we help you revise and score efficiently. We're not just digital — we print and deliver too.
+      <br><br>
+      🚀 Coming Soon: Nexown will launch a **full printed book** of compiled materials for board exams and competitive preparation.
+    </p>
   </section>
 
-  <section class="section">
-    <h2>🤝 Our Team</h2>
-    <ul class="team-list">
-      <li><strong>Barani Vigneshwar</strong> – Founder & Editor-in-Chief</li><br>
-      <li><strong>Visakan</strong> – Question Collector & Manager</li><br>
-      <li><strong>Pavish</strong> – Delivery & Handling</li><br>
-      <li><strong>Vishnu</strong> – Promotion & Customer Support</li><br>
+  <section class="team">
+    <h2>🤝 Meet Our Team</h2>
+    <ul>
+      <li><strong>Barani Vigneshwar</strong> – Founder & Editor-in-Chief</li>
+      <li><strong>Visakan</strong> – Question Collector & Print Manager</li>
+      <li><strong>Pavish</strong> – Delivery & Handling</li>
+      <li><strong>Vishnu</strong> – Promotion & Customer Support</li>
     </ul>
   </section>
-  <section class="section"> <h2 style="text-align: center;">🧠 About Us</h2><p style="padding: 10px; font-weight: bold;">
-
-Welcome to Nexown — where knowledge meets innovation.
-
-We are a passionate team of Class 11 students committed to reshaping how academic content is delivered. Born out of dedication and a thirst to empower our peers, Nexown offers carefully curated study materials, short notes, expected questions, and exclusive content tailored for both State Board and CBSE students.
-
-Whether you're preparing for Unit Tests, Term Exams, or Board Exams, Nexown ensures you're backed with high-quality notes, exam-ready questions, and conceptual clarity.
-
-Our mission is simple:
-“Make learning smarter, not harder.”</p></section>
+  <section>
+  <h2>📬 Contact Us</h2>
+  <div style="font-size: 1.1rem; line-height: 2;">
+    <p>
+      <i class="fas fa-envelope contact-icon bounce" style="color: #1a73e8;"></i>
+      <strong>Email:</strong>
+      <a href="mailto:nexownedu@gmail.com" style="color: #1a73e8; text-decoration: none;">nexownedu@gmail.com</a>
+    </p>
+    <p>
+      <i class="fab fa-instagram contact-icon spin" style="color: #e1306c;"></i>
+      <strong>Instagram:</strong>
+      <a href="https://www.instagram.com/nexownedu?igsh=MXJweGE0OGJnNnQ4eQ==" target="_blank" style="color: #e1306c; text-decoration: none;">@nexownedu</a>
+    </p>
+    <p>
+      <i class="fas fa-map-marker-alt contact-icon flash" style="color: #27ae60;"></i>
+      <strong>Location:</strong> Available digitally & within school
+    </p>
+  </div>
+</section>
 
   <footer>
-    &copy; Nexown. All Rights Reserved.
+    &copy; 2025–2035 Nexown. All rights reserved.
   </footer>
 
 </body>
-</html>
+      </html>
